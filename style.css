@@ -7,18 +7,15 @@
 }
 
 /* =====================
-   BODY + AURORA BACKGROUND
+   BODY
 ===================== */
 
 body{
-background:#0b0b0b;
-color:#f5f5f5;
-position:relative;
-overflow-x:hidden;
+  background:#0b0b0b;
+  color:#f5f5f5;
+  position:relative;
+  overflow-x:hidden;
 }
-
-/* AURORA BACKGROUND */
-
 body::before{
 content:"";
 position:fixed;
@@ -27,8 +24,7 @@ left:-50%;
 width:200%;
 height:200%;
 
-background:
-radial-gradient(circle at 30% 30%, rgba(245,158,11,0.35), transparent 40%),
+background:radial-gradient(circle at 30% 30%, rgba(245,158,11,0.35), transparent 40%),
 radial-gradient(circle at 70% 60%, rgba(255,180,0,0.25), transparent 40%),
 radial-gradient(circle at 50% 80%, rgba(255,140,0,0.25), transparent 40%);
 
@@ -37,7 +33,6 @@ animation:auroraMove 18s infinite alternate ease-in-out;
 
 z-index:-1;
 }
-
 @keyframes auroraMove{
 
 0%{
@@ -72,14 +67,14 @@ transform:translate(-10%,10%) rotate(360deg);
   z-index:1000;
 }
 
+/* LOGO */
+
 .logo{
   font-weight:bold;
   font-size:20px;
 }
 
-/* =====================
-   NAV MENU
-===================== */
+/* MENU TENGAH */
 
 .nav-links{
   display:flex;
@@ -99,6 +94,8 @@ transform:translate(-10%,10%) rotate(360deg);
 .nav-links a:hover{
   color:#f59e0b;
 }
+
+/* KANAN NAVBAR */
 
 .nav-right{
   display:flex;
@@ -124,6 +121,8 @@ transform:translate(-10%,10%) rotate(360deg);
 .btn:hover{
   transform:translateY(-3px);
 }
+
+/* HIRE BUTTON */
 
 .hire-btn{
   background:linear-gradient(135deg,#FFD700,#ffb700);
@@ -219,6 +218,10 @@ transform:translate(-10%,10%) rotate(360deg);
   gap:30px;
 }
 
+/* =====================
+   PORTFOLIO IMAGE
+===================== */
+
 .card img{
   width:100%;
   height:170px;
@@ -284,16 +287,28 @@ transform:translate(-10%,10%) rotate(360deg);
 }
 
 /* =====================
+   STICKY NAVBAR EFFECT
+===================== */
+
+.navbar.scrolled{
+  background:rgba(0,0,0,0.85);
+  box-shadow:0 5px 20px rgba(0,0,0,0.4);
+}
+
+/* =====================
    LIGHT MODE
 ===================== */
 
 body.light{
-background: linear-gradient(135deg,#f5f7fa,#eef1f5,#e6ebf2);
-color:#1a1a1a;
+  background:linear-gradient(135deg,#f5f7fa,#eef1f5,#e6ebf2);
+  color:#1a1a1a;
+  position:relative;
+  overflow-x:hidden;
 }
 
 body.light .navbar{
   background:rgba(255,255,255,0.9);
+  border-bottom:3px solid #f59e0b;
 }
 
 body.light .nav-links a{
@@ -306,6 +321,18 @@ body.light .skill-card{
   background:#ffffff;
   border:1px solid rgba(245,158,11,0.25);
   color:#1a1a1a;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+body.light input,
+body.light textarea{
+  background:#ffffff;
+  border:1px solid #ccc;
+  color:#1a1a1a;
+}
+
+body.light .footer{
+  background:#ffffff;
 }
 
 /* =====================
@@ -314,37 +341,221 @@ body.light .skill-card{
 
 @media(max-width:900px){
 
-.home-container{
-  flex-direction:column;
-  text-align:center;
+  .home-container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .nav-links{
+    gap:15px;
+  }
+
+  .home-left h1{
+    font-size:28px;
+  }
+
 }
 
-.nav-links{
-  gap:15px;
+/* =====================
+   PROFILE TEXT FIX
+===================== */
+
+.home-card h3{
+  color:white;
 }
 
-.home-left h1{
-  font-size:28px;
+.home-card p{
+  color:#ccc;
 }
 
+body.light .home-card h3{
+  color:#1a1a1a;
 }
+
+body.light .home-card p{
+  color:#1a1a1a;
+}
+
+.major{
+  font-weight:500;
+  opacity:0.9;
+}
+
+/* =====================
+   THEME SWITCH
+===================== */
+
+.theme-switch{
+  position:relative;
+  display:inline-block;
+  width:70px;
+  height:34px;
+}
+
+.theme-switch input{
+  opacity:0;
+  width:0;
+  height:0;
+}
+
+/* BACKGROUND */
+
+.slider-theme{
+  position:absolute;
+  cursor:pointer;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:linear-gradient(135deg,#4a4a4a,#666);
+  border-radius:40px;
+  transition:0.4s;
+}
+
+/* BULATAN */
+
+.knob{
+  position:absolute;
+  height:26px;
+  width:26px;
+  left:4px;
+  top:4px;
+  background:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:14px;
+  transition:0.4s;
+  box-shadow:0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* LIGHT MODE SWITCH */
+
+input:checked + .slider-theme{
+  background:linear-gradient(135deg,#f59e0b,#ffcc33);
+}
+
+input:checked + .slider-theme .knob{
+  transform:translateX(36px);
+}
+
+/* =====================
+   TEXT LIGHT MODE
+===================== */
+
+body.light h1,
+body.light h2,
+body.light h3{
+  color:#222;
+}
+
+body.light p{
+  color:#444;
+}
+
+/* =====================
+   LIGHT MODE HOVER
+===================== */
+
+body.light .home-card:hover,
+body.light .card:hover,
+body.light .skill-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 25px rgba(245,158,11,0.5);
+}
+
+body.light .home-card img:hover{
+  box-shadow:0 0 15px rgba(245,158,11,0.6);
+}
+
+body.light input:focus,
+body.light textarea:focus{
+  border:1px solid #f59e0b;
+  box-shadow:0 0 8px rgba(245,158,11,0.4);
+}
+
+body.light .title{
+  color:#f59e0b;
+}
+
+/* =====================
+   LIGHT MODE GLOW
+===================== */
+
+body.light::before{
+  content:"";
+  position:fixed;
+  top:-200px;
+  left:-200px;
+  width:500px;
+  height:500px;
+  background:radial-gradient(circle,rgba(245,158,11,0.25),transparent);
+  filter:blur(120px);
+  z-index:-1;
+}
+
+body.light::after{
+  content:"";
+  position:fixed;
+  bottom:-200px;
+  right:-200px;
+  width:500px;
+  height:500px;
+  background:radial-gradient(circle,rgba(245,158,11,0.25),transparent);
+  filter:blur(120px);
+  z-index:-1;
+}
+
+/* =====================
+   MOBILE
+===================== */
 
 @media(max-width:768px){
 
-.navbar{
-padding:12px 4%;
+  .navbar{
+    padding:12px 4%;
+  }
+
+  .nav-links{
+    gap:10px;
+  }
+
+  .nav-links a{
+    font-size:13px;
+  }
+
+  .hire-btn{
+    display:none;
+  }
+
 }
 
-.nav-links{
-gap:10px;
+/* =====================
+   DARK MODE GLOW
+===================== */
+
+body::before{
+  content:"";
+  position:fixed;
+  top:-200px;
+  left:-200px;
+  width:500px;
+  height:500px;
+  background:radial-gradient(circle,rgba(245,158,11,0.15),transparent);
+  filter:blur(140px);
+  z-index:-1;
 }
 
-.nav-links a{
-font-size:13px;
+body::after{
+  content:"";
+  position:fixed;
+  bottom:-200px;
+  right:-200px;
+  width:500px;
+  height:500px;
+  background:radial-gradient(circle,rgba(245,158,11,0.15),transparent);
+  filter:blur(140px);
+  z-index:-1;
 }
 
-.hire-btn{
-display:none;
-}
-
-}
