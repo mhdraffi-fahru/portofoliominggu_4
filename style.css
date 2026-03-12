@@ -1,0 +1,494 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+  font-family:'Poppins',sans-serif;
+}
+
+/* =====================
+   BODY
+===================== */
+
+body{
+  background: linear-gradient(to right,#1e1e1e,#2c2c2c);
+  color:#f5f5f5;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+
+.navbar{
+  position:sticky;
+  top:0;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 8%;
+  backdrop-filter:blur(15px);
+  background:rgba(0,0,0,0.5);
+  border-bottom:3px solid #f59e0b;
+  z-index:1000;
+}
+
+/* LOGO */
+
+.logo{
+  font-weight:bold;
+  font-size:20px;
+}
+
+/* MENU TENGAH */
+
+.nav-links{
+  display:flex;
+  gap:30px;
+  list-style:none;
+  justify-content:center;
+  flex:1;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:white;
+  font-size:15px;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#f59e0b;
+}
+
+/* KANAN NAVBAR */
+
+.nav-right{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+/* =====================
+   BUTTON
+===================== */
+
+.btn{
+  padding:8px 20px;
+  border-radius:20px;
+  background:linear-gradient(to right,#d97706,#f59e0b);
+  color:white;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+/* HIRE BUTTON */
+
+.hire-btn{
+  background:linear-gradient(135deg,#FFD700,#ffb700);
+  color:#111;
+  font-weight:600;
+}
+
+/* =====================
+   HOME
+===================== */
+
+.home{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding:120px 8%;
+}
+
+.home-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:60px;
+  width:100%;
+}
+
+.home-left h1{
+  font-size:40px;
+  margin:15px 0;
+}
+
+.home-left span{
+  color:#f59e0b;
+}
+
+.home-left p{
+  max-width:500px;
+  line-height:1.7;
+}
+
+/* =====================
+   PARTICLES
+===================== */
+
+#particles{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+/* =====================
+   CARD
+===================== */
+
+.home-card,
+.card,
+.skill-card{
+  background:#202020;
+  border-radius:25px;
+  border:1px solid rgba(245,158,11,0.3);
+  padding:30px;
+  transition:0.4s;
+}
+
+.home-card:hover,
+.card:hover,
+.skill-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 30px rgba(245,158,11,0.6);
+}
+
+.home-card img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:15px;
+  border:3px solid #f59e0b;
+  margin-bottom:20px;
+}
+
+/* =====================
+   SECTION
+===================== */
+
+.section{
+  padding:120px 8%;
+  text-align:center;
+}
+
+.title{
+  font-size:30px;
+  margin-bottom:50px;
+  color:#f59e0b;
+}
+
+/* =====================
+   GRID
+===================== */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+/* =====================
+   PORTFOLIO IMAGE
+===================== */
+
+.card img{
+  width:100%;
+  height:170px;
+  object-fit:cover;
+  border-radius:15px;
+}
+
+/* =====================
+   CONTACT
+===================== */
+
+.contact-card{
+  max-width:500px;
+  margin:auto;
+}
+
+.contact-card form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.contact-card input,
+.contact-card textarea{
+  padding:12px;
+  border-radius:10px;
+  border:none;
+  outline:none;
+}
+.contact-card textarea{
+  resize:none;
+}
+
+/* =====================
+   SOCIAL BUTTON
+===================== */
+
+.ig-btn{
+  display:inline-block;
+  padding:10px 25px;
+  border-radius:25px;
+  text-decoration:none;
+  background:linear-gradient(to right,#d97706,#f59e0b);
+  color:white;
+  font-weight:600;
+  margin-top:10px;
+  transition:0.3s;
+}
+
+.ig-btn:hover{
+  transform:translateY(-3px);
+}
+
+/* =====================
+   FOOTER
+===================== */
+
+.footer{
+  padding:30px;
+  text-align:center;
+  border-top:1px solid rgba(245,158,11,0.3);
+}
+
+/* =====================
+   STICKY NAVBAR EFFECT
+===================== */
+
+.navbar.scrolled{
+  background:rgba(0,0,0,0.85);
+  box-shadow:0 5px 20px rgba(0,0,0,0.4);
+}
+
+/* =====================
+   LIGHT MODE
+===================== */
+
+body.light{
+background: linear-gradient(135deg,#f5f7fa,#eef1f5,#e6ebf2);
+color:#1a1a1a;
+position:relative;
+overflow-x:hidden;
+}
+body.light .navbar{
+  background:rgba(255,255,255,0.9);
+  border-bottom:3px solid #f59e0b;
+}
+
+body.light .nav-links a{
+  color:#1a1a1a;
+}
+
+body.light .home-card,
+body.light .card,
+body.light .skill-card{
+  background:#ffffff;
+  border:1px solid rgba(245,158,11,0.25);
+  color:#1a1a1a;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+body.light input,
+body.light textarea{
+  background:#ffffff;
+  border:1px solid #ccc;
+  color:#1a1a1a;
+}
+
+body.light .footer{
+  background:#ffffff;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media(max-width:900px){
+
+.home-container{
+  flex-direction:column;
+  text-align:center;
+}
+
+.nav-links{
+  gap:15px;
+}
+
+.home-left h1{
+  font-size:28px;
+}
+
+}
+/* FIX TEXT CARD PROFILE */
+.home-card h3{
+  color:white;
+}
+
+.home-card p{
+  color:#ccc;
+}
+
+body.light .home-card h3{
+  color:#1a1a1a;
+}
+
+body.light .home-card p{
+  color:#1a1a1a;
+}
+
+.major{
+  font-weight:500;
+  opacity:0.9;
+}
+/* THEME BUTTON */
+
+/* IOS STYLE THEME SWITCH */
+
+.theme-switch{
+position:relative;
+display:inline-block;
+width:70px;
+height:34px;
+}
+
+.theme-switch input{
+opacity:0;
+width:0;
+height:0;
+}
+
+/* BACKGROUND */
+
+.slider-theme{
+position:absolute;
+cursor:pointer;
+top:0;
+left:0;
+right:0;
+bottom:0;
+
+background:linear-gradient(135deg,#4a4a4a,#666);
+border-radius:40px;
+
+transition:0.4s;
+}
+
+/* BULATAN */
+
+.knob{
+position:absolute;
+height:26px;
+width:26px;
+
+left:4px;
+top:4px;
+
+background:white;
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:14px;
+
+transition:0.4s;
+box-shadow:0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* LIGHT MODE */
+
+input:checked + .slider-theme{
+background:linear-gradient(135deg,#f59e0b,#ffcc33);
+}
+
+input:checked + .slider-theme .knob{
+transform:translateX(36px);
+}
+body.light h1,
+body.light h2,
+body.light h3{
+  color:#222;
+}
+
+body.light p{
+  color:#444;
+}
+body.light .home-card:hover,
+body.light .card:hover,
+body.light .skill-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 25px rgba(245,158,11,0.5);
+}
+body.light .home-card img:hover{
+  box-shadow:0 0 15px rgba(245,158,11,0.6);
+}
+body.light input:focus,
+body.light textarea:focus{
+  border:1px solid #f59e0b;
+  box-shadow:0 0 8px rgba(245,158,11,0.4);
+}
+body.light .title{
+  color:#f59e0b;
+}
+/* LIGHT MODE GLOW EFFECT */
+
+body.light::before{
+content:"";
+position:fixed;
+top:-200px;
+left:-200px;
+width:500px;
+height:500px;
+
+background:radial-gradient(circle,rgba(245,158,11,0.25),transparent);
+
+filter:blur(120px);
+z-index:-1;
+}
+
+body.light::after{
+content:"";
+position:fixed;
+bottom:-200px;
+right:-200px;
+width:500px;
+height:500px;
+
+background:radial-gradient(circle,rgba(245,158,11,0.25),transparent);
+
+filter:blur(120px);
+z-index:-1;
+}
+@media(max-width:768px){
+
+.navbar{
+padding:12px 4%;
+}
+
+.nav-links{
+gap:10px;
+}
+
+.nav-links a{
+font-size:13px;
+}
+
+.hire-btn{
+display:none;
+}
+
+}
