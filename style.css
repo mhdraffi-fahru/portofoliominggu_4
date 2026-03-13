@@ -52,9 +52,6 @@ body::before{
   100%{
     transform:translate(-10%,10%) rotate(360deg);
   }
-
-}
-
 }
 
 /* =====================
@@ -536,33 +533,5 @@ body.light::after{
     display:none;
   }
 
-}
-
-/* =====================
-   DARK MODE GLOW
-===================== */
-
-body::before{
-  content:"";
-  position:fixed;
-  top:-200px;
-  left:-200px;
-  width:500px;
-  height:500px;
-  background:radial-gradient(circle,rgba(245,158,11,0.15),transparent);
-  filter:blur(140px);
-  z-index:-1;
-}
-
-body::after{
-  content:"";
-  position:fixed;
-  bottom:-200px;
-  right:-200px;
-  width:500px;
-  height:500px;
-  background:radial-gradient(circle,rgba(245,158,11,0.15),transparent);
-  filter:blur(140px);
-  z-index:-1;
 }
 
