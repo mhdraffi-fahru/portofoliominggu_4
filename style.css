@@ -17,7 +17,18 @@ body{
   transition:background 0.3s ease,color 0.3s ease;
 }
 
+.navbar,
+.home-card,
+.card,
+.skill-card,
+.section,
+.footer{
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
 
+h1,h2,h3,p,a{
+  transition: color 0.3s ease;
+}
 
 /* =====================
    NAVBAR
