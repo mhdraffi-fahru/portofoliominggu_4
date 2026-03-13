@@ -436,30 +436,10 @@ body.light p{
    LIGHT MODE GLOW
 ===================== */
 
-body.light::before{
-  content:"";
-  position:fixed;
-  top:-200px;
-  left:-200px;
-  width:500px;
-  height:500px;
-  background:radial-gradient(circle,rgba(245,158,11,0.25),transparent);
-  filter:blur(70px);
-  z-index:-1;
+body.light{
+  background:linear-gradient(135deg,#f5f7fa,#eef1f5,#e6ebf2);
+  color:#1a1a1a;
 }
-
-body.light::after{
-  content:"";
-  position:fixed;
-  bottom:-200px;
-  right:-200px;
-  width:500px;
-  height:500px;
-  background:radial-gradient(circle,rgba(245,158,11,0.25),transparent);
-  filter:blur(70px);
-  z-index:-1;
-}
-
 /* =====================
    MOBILE
 ===================== */
