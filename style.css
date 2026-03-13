@@ -34,7 +34,7 @@ radial-gradient(circle at 30% 30%, rgba(180,120,40,0.18), transparent 40%),
 radial-gradient(circle at 70% 60%, rgba(140,90,30,0.15), transparent 40%),
 radial-gradient(circle at 50% 80%, rgba(110,70,20,0.12), transparent 40%);
   
-  filter:blur(45px);
+  filter:blur(40px);
   animation:auroraMove 25s infinite alternate ease-in-out;
   will-change: transform;
   z-index:-1;
