@@ -10,49 +10,14 @@
    BODY
 ===================== */
 body{
-  background:#0b0b0b;
+  background:linear-gradient(135deg,#0b0b0b,#121212,#1a1a1a);
   color:#f5f5f5;
   position:relative;
   overflow-x:hidden;
-  transition:background 0.3s ease, color 0.3s ease;
-  transform: translateZ(0);
+  transition:background 0.3s ease,color 0.3s ease;
 }
 
-body::before{
-  content:"";
-  position:fixed;
-  top:-50%;
-  left:-50%;
-  width:150%;
-  height:150%;
 
- will-change: transform;
- transform: translateZ(0);
-
-background:
-radial-gradient(circle at 30% 30%, rgba(180,120,40,0.18), transparent 40%),
-radial-gradient(circle at 70% 60%, rgba(140,90,30,0.15), transparent 40%),
-radial-gradient(circle at 50% 80%, rgba(110,70,20,0.12), transparent 40%);
-  
-  filter:blur(40px);
-  animation:auroraMove 25s infinite alternate ease-in-out;
-  will-change: transform;
-  z-index:-1;
-}
-@keyframes auroraMove{
-
-  0%{
-    transform:translate(-10%,-10%) rotate(0deg);
-  }
-
-  50%{
-    transform:translate(10%,10%) rotate(180deg);
-  }
-
-  100%{
-    transform:translate(-10%,10%) rotate(360deg);
-  }
-}
 
 /* =====================
    NAVBAR
