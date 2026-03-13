@@ -16,6 +16,8 @@ icon.textContent="☀️";
 document.body.classList.remove("light");
 icon.textContent="🌙";
 }
+   
+document.body.offsetHeight;   
 
 });
 
