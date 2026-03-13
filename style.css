@@ -66,7 +66,7 @@ radial-gradient(circle at 50% 80%, rgba(110,70,20,0.12), transparent 40%);
   align-items:center;
   justify-content:space-between;
   padding:15px 8%;
-  backdrop-filter:blur(15px);
+  backdrop-filter:blur(5px);
   background:rgba(0,0,0,0.5);
   border-bottom:3px solid #f59e0b;
   z-index:1000;
