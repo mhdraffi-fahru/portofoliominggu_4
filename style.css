@@ -462,27 +462,29 @@ body.light p{
    LIGHT MODE HOVER
 ===================== */
 
-body.light .home-card:hover,
-body.light .card:hover,
-body.light .skill-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 0 25px rgba(245,158,11,0.5);
+body.light::before{
+  content:"";
+  position:fixed;
+  top:-150px;
+  left:-150px;
+  width:350px;
+  height:350px;
+  background:radial-gradient(circle,rgba(245,158,11,0.18),transparent);
+  filter:blur(70px);
+  z-index:-1;
 }
 
-body.light .home-card img:hover{
-  box-shadow:0 0 15px rgba(245,158,11,0.6);
+body.light::after{
+  content:"";
+  position:fixed;
+  bottom:-150px;
+  right:-150px;
+  width:350px;
+  height:350px;
+  background:radial-gradient(circle,rgba(245,158,11,0.18),transparent);
+  filter:blur(70px);
+  z-index:-1;
 }
-
-body.light input:focus,
-body.light textarea:focus{
-  border:1px solid #f59e0b;
-  box-shadow:0 0 8px rgba(245,158,11,0.4);
-}
-
-body.light .title{
-  color:#f59e0b;
-}
-
 /* =====================
    LIGHT MODE GLOW
 ===================== */
@@ -495,7 +497,7 @@ body.light::before{
   width:500px;
   height:500px;
   background:radial-gradient(circle,rgba(245,158,11,0.25),transparent);
-  filter:blur(120px);
+  filter:blur(70px);
   z-index:-1;
 }
 
@@ -507,7 +509,7 @@ body.light::after{
   width:500px;
   height:500px;
   background:radial-gradient(circle,rgba(245,158,11,0.25),transparent);
-  filter:blur(120px);
+  filter:blur(70px);
   z-index:-1;
 }
 
