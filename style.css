@@ -88,8 +88,7 @@ body::before{
   display:flex;
   gap:30px;
   list-style:none;
-  justify-content:center;
-  flex:1;
+  margin:auto;
 }
 
 .nav-links a{
