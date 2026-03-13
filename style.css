@@ -459,33 +459,6 @@ body.light p{
 }
 
 /* =====================
-   LIGHT MODE HOVER
-===================== */
-
-body.light::before{
-  content:"";
-  position:fixed;
-  top:-150px;
-  left:-150px;
-  width:350px;
-  height:350px;
-  background:radial-gradient(circle,rgba(245,158,11,0.18),transparent);
-  filter:blur(70px);
-  z-index:-1;
-}
-
-body.light::after{
-  content:"";
-  position:fixed;
-  bottom:-150px;
-  right:-150px;
-  width:350px;
-  height:350px;
-  background:radial-gradient(circle,rgba(245,158,11,0.18),transparent);
-  filter:blur(70px);
-  z-index:-1;
-}
-/* =====================
    LIGHT MODE GLOW
 ===================== */
 
