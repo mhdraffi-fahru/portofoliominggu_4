@@ -29,12 +29,12 @@ body::before{
  will-change: transform;
  transform: translateZ(0);
 
-  background:
-  radial-gradient(circle at 30% 30%, rgba(245,158,11,0.35), transparent 40%),
-  radial-gradient(circle at 70% 60%, rgba(255,180,0,0.25), transparent 40%),
-  radial-gradient(circle at 50% 80%, rgba(255,140,0,0.25), transparent 40%);
-
-  filter:blur(40px);
+ background:
+ radial-gradient(circle at 30% 30%, rgba(245,158,11,0.28), transparent 40%),
+ radial-gradient(circle at 70% 60%, rgba(255,170,60,0.20), transparent 40%),
+ radial-gradient(circle at 50% 80%, rgba(255,120,30,0.18), transparent 40%);
+  
+  filter:blur(45px);
   animation:auroraMove 25s infinite alternate ease-in-out;
   will-change: transform;
   z-index:-1;
